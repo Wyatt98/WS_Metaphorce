@@ -57,7 +57,7 @@ public class ContractRepository {
 			entityManager.close();
 		}
 		
-		return ResponseEntity.created(null).body(new CustomResponse(true, "Contrato creado exitosamente"));
+		return ResponseEntity.ok().body(new CustomResponse(true, "Contrato creado exitosamente"));
 	}
 	
 	@Transactional
@@ -71,7 +71,7 @@ public class ContractRepository {
 			
 			query.executeUpdate();
 			
-			return ResponseEntity.ok().body(new CustomResponse(true, "El contrato fue desactivado"));
+			return ResponseEntity.ok().body(new CustomResponse(true, "Contrato creado exitosamente"));
 			
 		} catch (Exception e) {
 			return ErrorsResponse.internalServerError();

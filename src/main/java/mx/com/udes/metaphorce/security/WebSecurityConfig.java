@@ -15,7 +15,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.httpBasic(withDefaults())
 		.authorizeRequests()
-		.antMatchers("/swagger-ui/**").permitAll()
+		.antMatchers("/swagger-ui.html").permitAll()
 		.anyRequest().authenticated();
 	}
 	
